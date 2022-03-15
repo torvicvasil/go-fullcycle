@@ -1,28 +1,7 @@
 # go-fullcycle
 Desafio Docker Go
 
-
-Dockerfile
-
-FROM golang:1.13-alpine3.11 AS builder 
-
-WORKDIR /app
-COPY . .
-RUN go build main.go
-
-FROM scratch
-WORKDIR /app 
-COPY --from=builder /app . 
-CMD ["/app/main"]
-
-
-main.go
-
-package main
-import "fmt"
-func main() {
-    fmt.Println("Code.education Rocks!")
-}
+https://hub.docker.com/repository/docker/torvicvasil/codeeducation
 
 Para rodar:
 
